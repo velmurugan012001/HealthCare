@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { doctorService } from 'src/app/Services/Doctor.service';
 import { appointmentService } from 'src/app/Services/appointment.service';
-import { signupService } from 'src/app/Services/sinup.services';
+import { signupService } from '../Services/sinup.services';
 
 @Component({
   selector: 'app-book',

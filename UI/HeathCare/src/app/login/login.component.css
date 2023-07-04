@@ -132,4 +132,15 @@ body {
     border-radius: 20px;
   }
   
+  @media (max-width: 768px)
+   {
+    .form1 {
+      margin: 0;
+      padding-left:80px;
+    }
   
+    .form_main {
+      width: 50%;
+   
+    }
+   }

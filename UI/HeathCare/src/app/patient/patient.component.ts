@@ -28,11 +28,11 @@ export class PatientHistoryComponent {
       
     }
   
-    addFeedback(id:number){
-      this.appointId=id;
-      //console.log(this.appointId);
-      console.log(this.patientdata);
+    // addFeedback(id:number){
+    //   this.appointId=id;
+    //   //console.log(this.appointId);
+    //   console.log(this.patientdata);
 
-    }
+    // }
   }
   

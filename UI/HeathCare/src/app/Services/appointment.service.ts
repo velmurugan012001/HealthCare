@@ -12,16 +12,16 @@ export class appointmentService{
     }
 
     bookappointment(book:AppointmentModel){
-        return this.httpClient.post("https://localhost:7192/api/Appointments",book);
+        return this.httpClient.post("https://localhost:7138/api/Appointments",book);
 
     }
 
     getAppointmentsdetails(){
-        return this.httpClient.get("https://localhost:7192/api/Appointments");
+        return this.httpClient.get("https://localhost:7138/api/Appointments");
     }
 
     getUserAppointmentsdetails(id:any){
-        return this.httpClient.get("https://localhost:7192/api/Appointments/"+id);
+        return this.httpClient.get("https://localhost:7138/api/Appointments/"+id);
     }
 
 

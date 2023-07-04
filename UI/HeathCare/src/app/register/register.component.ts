@@ -98,13 +98,13 @@ onRoleChange() {
     if (this.registerForm.valid)
     {
 
-      if(this.register.role =="Doctor"){
+      if(this.register.role == "Doctor"){
         this.signupService.Doctorsignup(this.DoctorRegister).subscribe(data=>{
           console.log("register request send to admin");
            alert("register request send to admin");
           setTimeout(() => {
             this.router.navigate(['login']);
-          }, 2000);
+          }, 1000);
 
         })
         this.registration_status = true;

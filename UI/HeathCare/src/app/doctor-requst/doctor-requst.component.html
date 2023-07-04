@@ -1,33 +1,22 @@
+<br><br><div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let req of request">
+      <div class="card">
+        <img src="assets/{{ req.id }}.jfif" class="card-img-top" alt="Image Description" height="150rem">
 
-<table class="table ">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">age</th>
-            <th scope="col">Email</th>
-            <th scope="col">Specialization</th>
-            <th scope="col">Experiance</th>
-            <th scope="col">phone No</th>
-            <th scope="col">Location</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let req of request">
-            <td>{{req.id}}</td>
-            <td>{{req.age}}</td>
-            <td>{{req.email}}</td>
-            <td>{{req.specialization}}</td>
-            <td>{{req.experiance}}</td>
-            <td>{{req.phone}}</td>
-            <td>{{req.location}}</td>
-
-            <td><button class="btn btn-success" (click)="handlePost(req)">Accept</button></td>
-            <td><button class="btn btn-danger" (click)="handleDelete(req.id,req)">Denied</button></td>
-
-        </tr>
-    </tbody>
-</table>
-
+        <div class="card-body">
+          <h5 class="card-title">Name: {{req.id}}</h5>
+          <p class="card-text">Age: {{req.age}}</p>
+          <p class="card-text">Email: {{req.email}}</p>
+          <p class="card-text">Specialization: {{req.specialization}}</p>
+          <p class="card-text">Experience: {{req.experiance}}</p>
+          <p class="card-text">Phone No: {{req.phone}}</p>
+          <p class="card-text">Location: {{req.location}}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-success" (click)="handlePost(req)">Accept</button>
+          <button class="btn btn-danger"(click)="handleDelete(req.id,req)">Denied</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>

@@ -1,23 +1,34 @@
-<div class="container">
-    <h1>Book Appointment</h1>
+<body>
     
-  
+
+<section>
+    <div class="login_img">
+
+      <a> <img src="./../../assets/logo2.png" style="height: 400px; width: 500px;" alt=""></a>
+    </div>
+    
+  </section>
+  <div class="container">
     <div class="row">
-      <div class=" card card-inverse  " style="height: 366px;" *ngFor="let c of DoctorRegister">
-        <!-- <img src=".\assets\images\{{c.imageLocation|slice:-12}}" class="card-img-top" alt="Image Description" > -->
-        <h3 class="card-title border-bottom font-monospace">{{c.id}}</h3>
-        <p class="card-text">Specialization : {{c.specialization}}</p>
-        <p class="card-text">Experiance : {{c.experiance}} Years</p>
-        <p class="card-text">Location : {{c.location}}</p>
-        <p class="card-text">Contact No: {{c.phone}}</p>
-      
-        <div id="buttons">
-            <button class="btn btn-danger " data-toggle="modal" data-target="#updateModal" (click)=" bookAppointment(c.id)">Book Appointment</button>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let c of DoctorRegister">
+        <div class="card">
+            <img src="assets/{{ c.id }}.jfif" class="card-img-top" alt="Image Description" height="150rem">
+            <div class="card-body">
+            <h3 class="card-title border-bottom">{{c.id}}</h3>
+            <p class="card-text">Specialization: {{c.specialization}}</p>
+            <p class="card-text">Experience: {{c.experience}} Years</p>
+            <p class="card-text">Location: {{c.location}}</p>
+            <p class="card-text">Contact No: {{c.phone}}</p>
+          </div>
+          <div id="buttons">
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#updateModal" (click)=" bookAppointment(c.id)">Book Appointment</button>
             
             </div>
+        </div>
+      </div>
+    </div>
+    <app-book [data]="selectedDoctorId"></app-book>
   </div>
-  <app-book data="{{selectedDoctorId}}" ></app-book>
-  
-
+  </body>
   
  
