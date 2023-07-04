@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { UserDTOModel } from "src/app/Model/UserDTO.model";
+import { UserDTOModel } from "../Model/UserDTO.model";
 import {Injectable} from '@angular/core';
 import { registerModel } from "src/app/Model/register.model";
 import { DRegisterModel } from "src/app/register/register.component";

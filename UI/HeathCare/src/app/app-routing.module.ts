@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { DoctorRequstComponent } from './doctor-requst/doctor-requst.component';
 import { PatientHistoryComponent } from './patient/patient.component';
 import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
+import { DoctorDetailsComponent } from './doctor-detail/doctor.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   // {path:'Doctor',component:DoctorDetailsComponent},
   {path:'Patient',component:PatientHistoryComponent},
   {path:'Requst',component:DoctorRequstComponent},
-  {path:'booking',component:AppointmentBookingComponent}
+  {path:'booking',component:AppointmentBookingComponent},
+  {path:'detail',component:DoctorDetailsComponent}
 
 ];
 

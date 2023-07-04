@@ -25,12 +25,4 @@ export class appointmentService{
     }
 
 
-    // updatefeedback(data:number,request:AppointmentupdateModel){
-    //     return this.httpClient.put("https://localhost:7192/api/Appointments/"+data,request);
-
-    // }
-
-    // updatePrescription(data:number,request:AppointmentupdateprescriptionModel){
-    //     return this.httpClient.put("https://localhost:7192/api/Appointments/Prescription/"+data,request);
-    // }
 }
