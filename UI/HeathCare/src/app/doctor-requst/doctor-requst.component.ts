@@ -33,9 +33,9 @@ export class DoctorRequstComponent {
     this.loggedInUser=new LoggedInUserModel();
   }
 
-  // ngOnInit(): void {
-  //   this.getrequests();
-  // }
+  ngOnInit(): void {
+    this.getrequests();
+  }
   handlePost(req:any)
   {
     this.register.id=req.id;
@@ -50,17 +50,17 @@ export class DoctorRequstComponent {
     
     req.requestStatus="Accepted";
    
-    //  this.handleUpdate(req);
+     this.handleUpdate(req);
 
     this.service.signup(this.register).subscribe(data=>{
       console.log("register in component")
-      // this.loggedInUser = data as LoggedInUserModel;
-      // console.log(this.loggedInUser);
+      this.loggedInUser = data as LoggedInUserModel;
+      console.log(this.loggedInUser);
       
-      // localStorage.setItem("token",this.loggedInUser.token);
-      // localStorage.setItem("UserID",this.loggedInUser.id);
-      // localStorage.setItem("role",this.loggedInUser.role);
-      // this.registration_status = true;
+      localStorage.setItem("token",this.loggedInUser.token);
+      localStorage.setItem("UserID",this.loggedInUser.id);
+      localStorage.setItem("role",this.loggedInUser.role);
+      this.registration_status = true;
       
     },
     err=>{
@@ -69,33 +69,33 @@ export class DoctorRequstComponent {
     
 }
 
-// handleUpdate(req:any){
-//   this.service.DoctorStatus(req.id,req).subscribe(data=>{
-//     console.log("Doctor Status updated",req)
-//     window.location.reload();
-//   })
+handleUpdate(req:any){
+  this.service.DoctorStatus(req.id,req).subscribe(data=>{
+    console.log("Doctor Status updated",req)
+    window.location.reload();
+  })
   
-// }
+}
   
 
-//   handleDelete(id:string,req:any){
-//     this.service.DeleteRequest(id,req).subscribe(data=>{
-//       console.log("Doctor request deleted")
-//       window.location.reload();
-//     })
+  handleDelete(id:string,req:any){
+    this.service.DeleteRequest(id,req).subscribe(data=>{
+      console.log("Doctor request deleted")
+      window.location.reload();
+    })
      
 
      
     
-//   }
+  }
 
-//   private getrequests(): void {
-//     this.service.getrequest().subscribe(result => {
-//       this.request = result;
-//       console.log(this.request);
-//     });
+  private getrequests(): void {
+    this.service.getrequest().subscribe(result => {
+      this.request = result;
+      console.log(this.request);
+    });
     
-//   }
+  }
 
 }
 

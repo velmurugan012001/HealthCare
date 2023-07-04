@@ -39,5 +39,7 @@ namespace HeathCare.Controllers
         {
             return await _service.deleteUser(id);
         }
+
+       
     }
 }

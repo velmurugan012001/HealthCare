@@ -57,8 +57,8 @@
 
 
           <div class="form-outline mb-4">
-            <input type="text" class="form-control form-control-lg" placeholder="Age"
-              [(ngModel)]="DoctorRegister.experiance" name="experiance" required pattern="[0-9]+"
+            <input type="number" class="form-control form-control-lg" placeholder="Age"
+              [(ngModel)]="register.age" name="age" required pattern="[0-9]+"
               #experiance="ngModel" />
             <div *ngIf="experiance.invalid && experiance.touched" class="text-danger">
               <div *ngIf="experiance.errors?.['required']">experiance is required.</div>

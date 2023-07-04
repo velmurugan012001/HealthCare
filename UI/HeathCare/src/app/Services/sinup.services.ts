@@ -27,27 +27,27 @@ export class signupService{
         return this.httpClient.post("https://localhost:7138/api/Doctor",register);
     }
 
-    // getrequest(){
-    //     return this.httpClient.get("https://localhost:7138/api/Doctor");
-    // }
+    getrequest(){
+        return this.httpClient.get("https://localhost:7138/api/Doctor");
+    }
 
-    // DoctorStatus(id:string,req:DoctorregisterModel){
+    DoctorStatus(id:string,req:DRegisterModel){
         
-    //     return this.httpClient.put(`https://localhost:7138/api/Doctor`+'/'+id,req);
-    // }
+        return this.httpClient.put(`https://localhost:7138/api/Doctor`+'/'+id,req);
+    }
 
-    // DeleteRequest(id:string,req:DoctorregisterModel){
-    //     return this.httpClient.delete("https://localhost:7138/api/Doctor/"+id);
+    DeleteRequest(id:string,req:DRegisterModel){
+        return this.httpClient.delete("https://localhost:7138/api/Doctor/"+id);
 
-    // }
+    }
 
-    // getDoctors(){
-    //     return this.httpClient.get("https://localhost:7138/api/Doctor/Doctors");
-    // }
+    getDoctors(){
+        return this.httpClient.get("https://localhost:7138/api/Doctor/Doctors");
+    }
 
-    // deleteDoctordetails(id:string,req:DoctorregisterModel){
-    //     return this.httpClient.delete(`https://localhost:7138/api/User`+'/'+id);
-    // }
+    deleteDoctordetails(id:string,req:DRegisterModel){
+        return this.httpClient.delete(`https://localhost:7138/api/User`+'/'+id);
+    }
 
 
     // bookappointment(book:AppointmentModel){

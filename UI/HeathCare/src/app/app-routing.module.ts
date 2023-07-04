@@ -1,18 +1,21 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DoctorComponent } from './doctor/doctor.component';
+// import { DoctorDetailsComponent } from './doctor-details/doctor.component';
 import { HomeComponent } from './home/home.component';
 import {LoginComponent} from'./login/login.component';
-import { PatientComponent } from './patient/patient.component';
+
 import { RegisterComponent } from './register/register.component';
 import { DoctorRequstComponent } from './doctor-requst/doctor-requst.component';
+import { PatientHistoryComponent } from './patient/patient.component';
+import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
+  {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'Register',component:RegisterComponent},
-  {path:'Doctor',component:DoctorComponent},
-  {path:'Patient',component:PatientComponent},
-  {path:'Requst',component:DoctorRequstComponent}
+  // {path:'Doctor',component:DoctorDetailsComponent},
+  {path:'Patient',component:PatientHistoryComponent},
+  {path:'Requst',component:DoctorRequstComponent},
+  {path:'booking',component:AppointmentBookingComponent}
 
 ];
 

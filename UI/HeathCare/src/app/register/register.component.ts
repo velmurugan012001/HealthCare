@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { LoggedInUserModel } from './../Model/LoggedInUser';
 import { Router } from '@angular/router';
-import { signupService } from './../Services/sinup.services';
+import { signupService } from '../Services/sinup.services';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-// import validation from '../helper/validation';
-
+//import validation from '../helper/validation';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -98,13 +98,16 @@ onRoleChange() {
     if (this.registerForm.valid)
     {
 
-      if(this.register.role=="Doctor"){
+      if(this.register.role =="Doctor"){
         this.signupService.Doctorsignup(this.DoctorRegister).subscribe(data=>{
-          console.log("register request send to admin")
+          console.log("register request send to admin");
+           alert("register request send to admin");
           setTimeout(() => {
             this.router.navigate(['login']);
-          }, 3000);
+          }, 2000);
+
         })
+        this.registration_status = true;
       }
       else{
 

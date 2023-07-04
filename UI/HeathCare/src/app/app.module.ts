@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from '../app/login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { DoctorComponent } from './doctor/doctor.component';
-import { PatientComponent } from './patient/patient.component';
+// import { DoctorDetailsComponent } from './doctor-details/doctor.component';
+import { PatientHistoryComponent } from './patient/patient.component';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppoinmentBookingComponent } from './appoinment-booking/appoinment-booking.component';
+import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
 import { DoctorRequstComponent } from './doctor-requst/doctor-requst.component';
 import { signupService } from './Services/sinup.services';
+import { BookComponent } from './book/book.component';
+import { doctorService } from './Services/Doctor.service';
+import { patientService } from './Services/padient.service';
+import { appointmentService } from './Services/appointment.service';
 
 @NgModule({
   declarations: [
@@ -21,11 +25,13 @@ import { signupService } from './Services/sinup.services';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    DoctorComponent,
-    PatientComponent,
+    BookComponent,
     AdminComponent,
-    AppoinmentBookingComponent,
-    DoctorRequstComponent
+    AdminComponent,
+    AppointmentBookingComponent,
+    DoctorRequstComponent,
+    AppointmentBookingComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,7 @@ import { signupService } from './Services/sinup.services';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [signupService],
+  providers: [signupService,doctorService,appointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,11 +33,16 @@ export class LoginComponent {
       localStorage.setItem("UserID",this.loggedInUser.id);
       localStorage.setItem("role",this.loggedInUser.role);
       localStorage.setItem("login", new Date().toDateString());
-    
+     
+
+      // if (localStorage.getItem("role") == "Admin")
+      // {
+      //   this.router.navigateByUrl("Doctor")
+      // }
       setTimeout(() => {
         
-        this.router.navigate(['home']);
-      }, 1000);
+        this.router.navigate(['']);
+      }, 100);
      
     },
     err=>{
@@ -47,7 +52,7 @@ export class LoginComponent {
   }
 
   move(){
-    this.router.navigateByUrl('register');
+    this.router.navigateByUrl('Register');
   }
 
 }
