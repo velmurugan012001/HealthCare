@@ -33,11 +33,6 @@ export class PatientHistoryComponent implements OnInit {
 
     });
   
-    // addFeedback(id:number){
-    //   this.appointId=id;
-    //   //console.log(this.appointId);
-    //   console.log(this.patientdata);
-
-    // }
+  
   }
 }

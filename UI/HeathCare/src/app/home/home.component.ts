@@ -10,14 +10,6 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements AfterViewInit {
 
-
-
-
-
-
-
-
-
   
   @ViewChild('multipleCardCarousel', { static: false })
   multipleCardCarousel!: ElementRef;

@@ -1,37 +1,16 @@
+<div class="row"><p style="font-size: 1.5rem; font-weight: bold; color: #333; margin-bottom: 1rem; text-align: center;">YOUR APPOINTMENT</p>
 
-
-<h1>Appointments</h1>
-
-<table class="table ">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">patient Name</th>
-            <th scope="col">Doctor Id</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time Slot</th>
-            <th scope="col">Reason</th>
-            <!-- <th scope="col">Medical Information</th>
-            <th scope="col">Feedback</th> -->
-            
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let req of request">
-            <td>{{req.appointmentId}}</td>
-            <td>{{req.patientId}}</td>
-            <td>{{req.doctorId}}</td>
-            <td>{{req.date}}</td>
-            <td>{{req.timeSlot}}</td>
-            <td>{{req.details}}</td>
-            <!-- <td>{{req.medicalInfo}}</td> -->
-            
-    
-
-        </tr>
-    </tbody>
-</table>
-
-<br><br>
-
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let req of request">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Appointment ID: {{ req.appointmentId }}</h5>
+          <p class="card-text">Patient Name: {{ req.patientId }}</p>
+          <p class="card-text">Doctor ID: {{ req.doctorId }}</p>
+          <p class="card-text">Date: {{ req.date }}</p>
+          <p class="card-text">Time Slot: {{ req.timeSlot }}</p>
+          <p class="card-text">Reason: {{ req.details }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

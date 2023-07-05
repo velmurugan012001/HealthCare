@@ -3,7 +3,7 @@ import { LoggedInUserModel } from './../Model/LoggedInUser';
 import { Router } from '@angular/router';
 import { signupService } from '../Services/sinup.services';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-//import validation from '../helper/validation';
+
 import { FormsModule } from '@angular/forms';
 
 @Component({

@@ -57,9 +57,8 @@
 
 
           <div class="form-outline mb-4">
-            <input type="number" class="form-control form-control-lg" placeholder="Age"
-              [(ngModel)]="register.age" name="age" required pattern="[0-9]+"
-              #experiance="ngModel" />
+            <input type="number" class="form-control form-control-lg" placeholder="Age" [(ngModel)]="register.age"
+              name="age" required pattern="[0-9]+" #experiance="ngModel" />
             <div *ngIf="experiance.invalid && experiance.touched" class="text-danger">
               <div *ngIf="experiance.errors?.['required']">experiance is required.</div>
               <div *ngIf="experiance.errors?.['pattern']">Please enter a valid experiance (only alphabets are

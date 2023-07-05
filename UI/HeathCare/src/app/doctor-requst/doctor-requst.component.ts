@@ -49,6 +49,7 @@ export class DoctorRequstComponent {
     this.register.phone=req.phone;
     
     req.requestStatus="Accepted";
+    alert("Requset Accepted")
    
      this.handleUpdate(req);
 
@@ -81,6 +82,7 @@ handleUpdate(req:any){
   handleDelete(id:string,req:any){
     this.service.DeleteRequest(id,req).subscribe(data=>{
       console.log("Doctor request deleted")
+      alert("Requset Denied")
       window.location.reload();
     })
      

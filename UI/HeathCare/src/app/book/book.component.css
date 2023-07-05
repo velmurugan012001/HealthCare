@@ -1,0 +1,25 @@
+.custom-modal-content {
+    /* background-color: #f5f5f5; */
+    background-image: url(./../../assets/bgimage6.jfif);
+    background-size: cover;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .custom-modal-title {
+    color: #333;
+  }
+  
+  .custom-label {
+    font-weight: bold;
+  }
+  
+  .custom-input {
+    border-radius: 5px;
+  }
+  
+  .custom-btn {
+    background-color: #007bff;
+    color: #fff;
+  }
+  

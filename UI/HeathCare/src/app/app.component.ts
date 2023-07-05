@@ -34,5 +34,6 @@ export class AppComponent {
     this.authService.logout();
     this.router.navigateByUrl('');
     localStorage.removeItem("token");
+   
   }
 }
