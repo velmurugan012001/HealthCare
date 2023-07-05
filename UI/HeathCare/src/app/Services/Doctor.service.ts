@@ -38,4 +38,9 @@ export class doctorService{
     DoctorDetail(id:string){
         return this.httpClient.get("https://localhost:7138/api/Doctor/"+id);
     }
+
+    bookappointment(book:AppointmentModel){
+        return this.httpClient.post("https://localhost:7138/api/Appointments",book);
+
+    }
 }

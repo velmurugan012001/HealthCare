@@ -25,7 +25,7 @@
   
   .btn {
     cursor: pointer;
-    margin-right: 70px;
+    margin-right: 60px;
     margin-left: 0px;
   }
   
@@ -44,5 +44,17 @@
   .btn-danger:hover {
     opacity: 0.8;
   }
+  body {
+    background-image: url('./../../assets/bgimage6.jfif');
+    background-size: cover;
+    background-position: center;
+  }
+  .login_img {
+    width: 10px;
+  height: 0px; 
+  padding-left: 400px;
+  padding-top: 50px;
+  }
+
   
   

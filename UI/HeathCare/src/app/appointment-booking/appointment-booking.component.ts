@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { doctorService } from '../Services/Doctor.service';
-
+import { signupService } from '../Services/sinup.services';
 
 @Component({
   selector: 'app-appointment-booking',
@@ -18,7 +18,7 @@ export class AppointmentBookingComponent implements OnInit {
   openModal() {
     this.modal.nativeElement.style.display = 'block'; // Show the modal
   }
-  constructor(private doctordet:doctorService,router: Router) {
+  constructor(private doctordet:doctorService,private router: Router) {
 
     this.DoctorRegister={
       id:"",
@@ -38,7 +38,6 @@ export class AppointmentBookingComponent implements OnInit {
   
 
   selectedDoctorId?: number;
-
   ngOnInit(): void
   {
     this.doctordet.getDoctors().subscribe(detils=>this.DoctorRegister=detils);  
@@ -47,10 +46,11 @@ export class AppointmentBookingComponent implements OnInit {
 
   bookAppointment(c:any){
     this.selectedDoctorId = c.id;
+   }
   
   
   }
-}
+
   
 export class DoctorregisterModel
 {
@@ -70,4 +70,3 @@ export class DoctorregisterModel
           
 
 }
-

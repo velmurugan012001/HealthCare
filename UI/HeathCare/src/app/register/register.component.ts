@@ -103,7 +103,7 @@ onRoleChange() {
           console.log("register request send to admin");
            alert("register request send to admin");
           setTimeout(() => {
-            this.router.navigate(['login']);
+            this.router.navigate(['']);
           }, 1000);
 
         })
@@ -122,7 +122,7 @@ onRoleChange() {
         localStorage.setItem("role",this.loggedInUser.role);
         this.registration_status = true;
         setTimeout(() => {
-          this.router.navigate(['login']);
+          this.router.navigate(['']);
         }, 3000);
         // alert(`\t ........Registration successfull........
         //   \n your user id is : ${this.loggedInUser.id} and your password is first 4 letters of your name + your birth date and month `);
@@ -144,7 +144,7 @@ onRoleChange() {
 
   login_here()
   {
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('');
   }
 }
 

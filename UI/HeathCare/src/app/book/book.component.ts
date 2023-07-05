@@ -22,9 +22,8 @@ export class BookComponent {
      doctorId:"",
      date:"",
      timeSlot:"",
-     details:"",
-     medicalInfo:"",
-     feedback:""
+     details:""
+   
     
    }
     
@@ -84,7 +83,6 @@ export class BookComponent {
     date:string=""
     timeSlot:string="";
     details:string="";
-    medicalInfo:string="";
-    feedback:string="";
+  
    }
 

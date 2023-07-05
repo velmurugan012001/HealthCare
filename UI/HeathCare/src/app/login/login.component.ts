@@ -33,17 +33,10 @@ export class LoginComponent {
       localStorage.setItem("UserID",this.loggedInUser.id);
       localStorage.setItem("role",this.loggedInUser.role);
       localStorage.setItem("login", new Date().toDateString());
-     
+      window.location.reload();
 
-      // if (localStorage.getItem("role") == "Admin")
-      // {
-      //   this.router.navigateByUrl("Doctor")
-      // }
-      setTimeout(() => {
-        
-        this.router.navigate(['']);
-        window.location.reload();
-      }, 100);
+     
+      this.router.navigate(['/home'])
      
     },
     err=>{

@@ -1,4 +1,14 @@
-<br><br><div class="row">
+<body>
+    
+
+  <section>
+      <div class="login_img">
+  
+        <a> <img src="./../../assets/logo2.png" style="height: 400px; width: 500px;" alt=""></a>
+      </div>
+      
+    </section>
+<div class="row">
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let req of request">
       <div class="card">
         <img src="assets/{{ req.id }}.jfif" class="card-img-top" alt="Image Description" height="150rem">
@@ -19,5 +29,6 @@
       </div>
     </div>
   </div>
-  <a class="nav-link" [routerLink]="['/detail']" routerLinkActive="active">Details</a>
+  <!-- <a class="nav-link" [routerLink]="['/detail']" routerLinkActive="active">Details</a> -->
   <br>
+</body>

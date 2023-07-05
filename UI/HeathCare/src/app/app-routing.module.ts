@@ -9,15 +9,19 @@ import { DoctorRequstComponent } from './doctor-requst/doctor-requst.component';
 import { PatientHistoryComponent } from './patient/patient.component';
 import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
 import { DoctorDetailsComponent } from './doctor-detail/doctor.component';
+import { AuthGuard } from './auth.guard';
+import { BookComponent } from './book/book.component';
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'login',component:LoginComponent},
+  {path:'home',component:HomeComponent},
+  {path:'',component:LoginComponent},
   {path:'Register',component:RegisterComponent},
   // {path:'Doctor',component:DoctorDetailsComponent},
-  {path:'Patient',component:PatientHistoryComponent},
-  {path:'Requst',component:DoctorRequstComponent},
-  {path:'booking',component:AppointmentBookingComponent},
-  {path:'detail',component:DoctorDetailsComponent}
+  {path:'Patient',component:PatientHistoryComponent, canActivate: [AuthGuard]},
+  {path:'Requst',component:DoctorRequstComponent, canActivate: [AuthGuard]},
+  {path:'booking',component:AppointmentBookingComponent, canActivate: [AuthGuard]},
+  { path: 'detail', component: DoctorDetailsComponent, canActivate: [AuthGuard] },
+  {path:'book',component:BookComponent,canActivate: [AuthGuard]}
+  
 
 ];
 

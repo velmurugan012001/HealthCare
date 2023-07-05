@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { appointmentService } from '../Services/appointment.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { appointmentService } from '../Services/appointment.service';
   templateUrl: './patient.component.html',
   styleUrls: ['./patient.component.css']
 })
-export class PatientHistoryComponent {
+export class PatientHistoryComponent implements OnInit {
   [x: string]: any;
   @ViewChild('myModal') modal: any;
   appointId?:number;
@@ -18,15 +18,20 @@ export class PatientHistoryComponent {
      this.patientdata=localStorage.getItem("UserID");
       this.getAppointments(this.patientdata);
     }
-  
-    private  getAppointments(patientdata:any): void {
-      this.service.getUserAppointmentsdetails(this.patientdata).subscribe((result: any) => {
-        this.request = result;
-        console.log(this.request);
+  ngOnInit(): void {
+    this.service.getAppointmentsdetails().subscribe((result: any) => {
+      this.request = result;
+      console.log(this.request);
 
-      });
-      
-    }
+    });
+  }
+  
+  private  getAppointments(patientdata:any): void {
+    this.service.getUserAppointmentsdetails(this.patientdata).subscribe((result: any) => {
+      this.request = result;
+      console.log(this.request);
+
+    });
   
     // addFeedback(id:number){
     //   this.appointId=id;
@@ -35,4 +40,4 @@ export class PatientHistoryComponent {
 
     // }
   }
-  
+}

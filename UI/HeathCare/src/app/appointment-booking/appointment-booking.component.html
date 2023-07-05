@@ -21,14 +21,15 @@
             <p class="card-text">Contact No: {{c.phone}}</p>
           </div>
           <div id="buttons">
-            <button class="btn btn-outline-success" data-toggle="modal" data-target="#updateModal" (click)=" bookAppointment(c.id)">Book Appointment</button>
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#updateModal"  (click)=" bookAppointment(c.id)">Book Appointment</button>
             
             </div>
         </div>
       </div>
     </div>
-    <app-book [data]="selectedDoctorId"></app-book>
   </div>
+    <app-book data="{{selectedDoctorId}}" ></app-book>
+ 
   </body>
   
  

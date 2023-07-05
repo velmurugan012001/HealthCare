@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,8 @@ import { patientService } from './Services/padient.service';
 import { appointmentService } from './Services/appointment.service';
 
 @NgModule({
+  schemas: [NO_ERRORS_SCHEMA],
+
   declarations: [
     AppComponent,
     HomeComponent,
@@ -30,7 +33,7 @@ import { appointmentService } from './Services/appointment.service';
     AdminComponent,
     AppointmentBookingComponent,
     DoctorRequstComponent,
-    AppointmentBookingComponent,
+    PatientHistoryComponent,
     BookComponent
   ],
   imports: [
